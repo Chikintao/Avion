@@ -1,3 +1,20 @@
 .logo {
   text-decoration: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0.7;
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: var(--outlint);
+    outline-offset: var(--outline-offset);
+  }
+  &:hover {
+    color: var(--dark-primary);
+  }
+  &:active {
+    color: var(--dark-primary);
+  }
 }

@@ -1,0 +1,45 @@
+.benefits {
+  //   &__list {
+  //   }
+
+  &__item {
+    grid-column: 3 span;
+    padding-top: 40px;
+    background-position: left top;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+  }
+
+  &__item--next {
+    background-image: url("/img/icons/delivery.svg");
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: var(--dark-primary);
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--dark-primary);
+    margin: 0;
+  }
+
+  &__item--made {
+    background-image: url("/img/icons/checkmark--outline.svg");
+  }
+
+  &__item--prices {
+    background-image: url("/img/icons/purchase.svg");
+  }
+
+  &__item--packaging {
+    background-image: url("/img/icons/sprout.svg");
+  }
+}

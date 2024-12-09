@@ -346,10 +346,21 @@ template {
   src: url("/fonts/ClashDisplayRegular.woff2");
   font-weight: 500;
 }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  -moz-column-gap: var(--gap);
+       column-gap: var(--gap);
+}
+
 .container {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: calc(var(--container-width) + var(--container-offset) * 2);
+}
+
+.section {
+  margin-bottom: 40px;
 }
 
 .header__top {
@@ -479,15 +490,47 @@ template {
   color: var(--dark-primary);
 }
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  width: 170px;
+  height: 56px;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  transition: var(--text-trs);
 }
 
-.page__body {
-  font-family: var(--font-family);
-  line-height: 1.5;
+.btn--theme-dark {
+  background-color: #494465;
+  color: var(--white);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--second-family);
+  font-weight: 400;
+  margin-bottom: 25px;
+  color: var(--dark-primary);
+}
+
+.title--small {
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.title--centered {
+  text-align: center;
+}
+
+.title--large {
+  font-size: 32px;
+}
+
+.title--mb-large {
+  margin-bottom: 50px;
 }
 
 .hero__container {
@@ -527,20 +570,48 @@ template {
   height: 100%;
 }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px 32px;
-  width: 170px;
-  height: 56px;
+.benefits__item {
+  grid-column: 3 span;
+  padding-top: 40px;
+  background-position: left top;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+.benefits__item--next {
+  background-image: url("/img/icons/delivery.svg");
+}
+.benefits__subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--dark-primary);
+}
+.benefits__description {
   font-weight: 400;
   font-size: 16px;
-  text-decoration: none;
-  transition: var(--text-trs);
+  color: var(--dark-primary);
+  margin: 0;
+}
+.benefits__item--made {
+  background-image: url("/img/icons/checkmark--outline.svg");
+}
+.benefits__item--prices {
+  background-image: url("/img/icons/purchase.svg");
+}
+.benefits__item--packaging {
+  background-image: url("/img/icons/sprout.svg");
 }
 
-.btn--theme-dark {
-  background-color: #494465;
-  color: var(--white);
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.page__body {
+  font-family: var(--font-family);
+  line-height: 1.5;
 }/*# sourceMappingURL=main.css.map */

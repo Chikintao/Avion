@@ -1,8 +1,11 @@
 @import "./base/normalize";
+@import "./base/reset";
 @import "./base/vars";
 @import "./base/fonts";
+@import "./base/container";
 @import "./layout/header";
 @import "./components/logo";
+@import "./components/menu";
 
 *,
 *::after,
@@ -10,11 +13,6 @@
   box-sizing: border-box;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: calc(var(--container-width) + var(--container-offset) * 2);
-}
 .page {
   &__body {
     font-family: var(--font-family);
@@ -22,48 +20,65 @@
   }
 }
 
-.list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-.btn-reset {
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
+.main {
 }
 
-.nav {
-  width: 100%;
-  &__list {
+.hero {
+  &__container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 44px;
   }
 
-  // &__item {
-  // }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    padding: 60px;
+    background-color: var(--dark-primary);
+  }
+
+  &__title {
+    max-width: 500px;
+    margin: 0;
+    margin-bottom: 40px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 140%;
+    color: var(--white);
+  }
 
   &__link {
-    font-weight: 400;
-    font-size: 16px;
-    color: #726e8d;
-    text-decoration: none;
-    transition: var(--text-trs);
-    &:focus {
-      outline: none;
-    }
-    &:focus-visible {
-      outline: var(--outlint);
-      outline-offset: var(--outline-offset);
-    }
-    &:hover {
-      color: var(--dark-primary);
-    }
-    &:active {
-      color: var(--dark-primary);
-    }
+    margin-bottom: auto;
   }
+
+  &__descripton {
+    max-width: 602px;
+    margin: 0;
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--white);
+  }
+  &__img {
+    flex-shrink: 0;
+    height: 100%;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  width: 170px;
+  height: 56px;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  transition: var(--text-trs);
+}
+.btn--theme-dark {
+  background-color: #494465;
+  color: var(--white);
 }

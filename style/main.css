@@ -298,6 +298,19 @@ template {
   display: none;
 }
 
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
 :root {
   --dark-primary: #2a254b;
   --primary: #4e4d93;
@@ -333,6 +346,12 @@ template {
   src: url("/fonts/ClashDisplayRegular.woff2");
   font-weight: 500;
 }
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: calc(var(--container-width) + var(--container-offset) * 2);
+}
+
 .header__top {
   padding: 20px 0;
   background-color: var(--white);
@@ -407,6 +426,7 @@ template {
 .header__bottom {
   background-color: var(--light-grey);
   padding: 20px 10px;
+  margin-bottom: 60px;
 }
 
 .logo {
@@ -427,36 +447,6 @@ template {
 }
 .logo:active {
   color: var(--dark-primary);
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 var(--container-offset);
-  max-width: calc(var(--container-width) + var(--container-offset) * 2);
-}
-
-.page__body {
-  font-family: var(--font-family);
-  line-height: 1.5;
-}
-
-.list-reset {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.btn-reset {
-  padding: 0;
-  border: none;
-  background: transparent;
-  cursor: pointer;
 }
 
 .nav {
@@ -487,4 +477,70 @@ template {
 }
 .nav__link:active {
   color: var(--dark-primary);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.page__body {
+  font-family: var(--font-family);
+  line-height: 1.5;
+}
+
+.hero__container {
+  display: flex;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  padding: 60px;
+  background-color: var(--dark-primary);
+}
+.hero__title {
+  max-width: 500px;
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 140%;
+  color: var(--white);
+}
+.hero__link {
+  margin-bottom: auto;
+}
+.hero__descripton {
+  max-width: 602px;
+  margin: 0;
+  padding-top: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--white);
+}
+.hero__img {
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  width: 170px;
+  height: 56px;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  transition: var(--text-trs);
+}
+
+.btn--theme-dark {
+  background-color: #494465;
+  color: var(--white);
 }/*# sourceMappingURL=main.css.map */

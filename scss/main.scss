@@ -5,6 +5,7 @@
 @import "./utilities/grid";
 @import "./utilities/container";
 @import "./utilities/section";
+@import "./utilities//centered";
 @import "./layout/header";
 @import "./components/logo";
 @import "./components/menu";
@@ -12,7 +13,7 @@
 @import "./base/title";
 @import "./layout/hero";
 @import "./layout/benefits";
-
+@import "./layout/product";
 *,
 *::after,
 *::before {

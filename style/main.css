@@ -349,8 +349,7 @@ template {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  -moz-column-gap: var(--gap);
-       column-gap: var(--gap);
+  gap: 20px;
 }
 
 .container {
@@ -361,6 +360,10 @@ template {
 
 .section {
   margin-bottom: 40px;
+}
+
+.centered {
+  text-align: center;
 }
 
 .header__top {
@@ -568,8 +571,12 @@ template {
 .hero__img {
   flex-shrink: 0;
   height: 100%;
+  display: block;
 }
 
+.benefits {
+  padding-top: 60px;
+}
 .benefits__item {
   grid-column: 3 span;
   padding-top: 40px;
@@ -603,6 +610,65 @@ template {
 }
 .benefits__item--packaging {
   background-image: url("/img/icons/sprout.svg");
+}
+
+.products {
+  padding-top: 80px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+}
+.product__list {
+  margin-bottom: 42px;
+}
+.product__title {
+  margin: 0;
+}
+.product__item {
+  grid-column: 3 span;
+}
+.product__image {
+  display: block;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.product__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+.product__link {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: var(--dark-primary);
+  text-decoration: none;
+}
+.product__price {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--dark-primary);
+}
+
+.products__btn {
+  padding: 16px 32px;
+  width: 170px;
+  height: 56px;
+  background: var(--light-grey);
+  color: currentColor;
+  transition: var(--text-trs);
+}
+.products__btn:hover {
+  background-color: var(--primary);
+  color: var(--white);
 }
 
 *,

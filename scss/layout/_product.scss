@@ -19,6 +19,9 @@
   &__item {
     grid-column: 3 span;
   }
+  &__item--big {
+    grid-column: 6 span;
+  }
   &__top {
   }
   &__image {
@@ -48,18 +51,5 @@
     font-weight: 400;
     font-size: 18px;
     color: var(--dark-primary);
-  }
-}
-
-.products__btn {
-  padding: 16px 32px;
-  width: 170px;
-  height: 56px;
-  background: var(--light-grey);
-  color: currentColor;
-  transition: var(--text-trs);
-  &:hover {
-    background-color: var(--primary);
-    color: var(--white);
   }
 }

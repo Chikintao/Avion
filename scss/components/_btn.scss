@@ -14,3 +14,14 @@
   background-color: #494465;
   color: var(--white);
 }
+.btn--theme-light {
+  background: var(--light-grey);
+  color: var(--dark-primary);
+}
+.products__btn {
+  transition: var(--text-trs);
+  &:hover {
+    background-color: var(--primary);
+    color: var(--white);
+  }
+}

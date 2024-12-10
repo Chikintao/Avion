@@ -1,0 +1,27 @@
+.form {
+  display: flex;
+  align-items: center;
+  &__input {
+    padding-left: 16px;
+    padding-right: 10px;
+    width: 354px;
+    height: 56px;
+    background: var(--light-grey);
+    border: none;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(42, 37, 75, 0.2);
+    }
+  }
+
+  &__btn {
+    padding: 16px 32px;
+    width: 120px;
+    height: 56px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+  }
+}

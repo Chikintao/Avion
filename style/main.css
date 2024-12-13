@@ -891,6 +891,33 @@ template {
   display: none;
 }
 
+.about-hero__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 88px 40px;
+}
+.about-hero__title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 140%;
+  color: var(--dark-primary);
+  max-width: 704px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.about-hero__btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--dark-primary);
+  width: 192px;
+  height: 56px;
+}
+
 *,
 *::after,
 *::before {

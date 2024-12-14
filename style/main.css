@@ -462,6 +462,10 @@ template {
   cursor: pointer;
 }
 
+.btn--theme-white {
+  background-color: var(--white);
+}
+
 .btn--theme-dark {
   background-color: #494465;
   color: var(--white);
@@ -667,6 +671,13 @@ template {
   background-image: url("/img/icons/sprout.svg");
 }
 
+.benefits--about .benefits__item {
+  padding: 42px;
+  padding-top: 84px;
+  background-color: var(--light-grey);
+  background-position: 42px 48px;
+}
+
 .products {
   padding-top: 80px;
 }
@@ -754,6 +765,7 @@ template {
 
 .about {
   margin-bottom: 0;
+  background-color: var(--white);
 }
 .about__content {
   display: flex;
@@ -796,6 +808,18 @@ template {
   width: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.about--reverse {
+  background: var(--light-grey);
+}
+
+.about--reverse .about__content {
+  flex-direction: row-reverse;
+}
+
+.about--reverse .about__info {
+  padding-left: 84px;
 }
 
 .footer {

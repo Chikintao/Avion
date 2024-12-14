@@ -12,6 +12,9 @@
   border: none;
   cursor: pointer;
 }
+.btn--theme-white {
+  background-color: var(--white);
+}
 .btn--theme-dark {
   background-color: #494465;
   color: var(--white);

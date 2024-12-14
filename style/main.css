@@ -927,4 +927,40 @@ template {
 .page__body {
   font-family: var(--font-family);
   line-height: 1.5;
+}
+
+.brand-info {
+  margin-bottom: 60px;
+}
+.brand-info__section {
+  display: flex;
+  gap: 16px;
+}
+.brand-info__text {
+  max-width: 634px;
+  padding: 64px;
+  background: var(--dark-primary);
+  font-weight: 400;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.brand-info__title {
+  margin-top: 0;
+  font-family: var(--second-family);
+}
+.brand-info__descr {
+  margin-top: 0;
+  font-size: 18px;
+}
+.brand-info__img img {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.brand-info__btn {
+  margin-top: auto;
+  display: block;
 }/*# sourceMappingURL=main.css.map */

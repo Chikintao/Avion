@@ -1,0 +1,112 @@
+// catalog
+.inner-hero {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/img/all-bg.jpg");
+  &__content {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 36px;
+    min-height: 209px;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 140%;
+    color: var(--white);
+  }
+}
+.catalog {
+  padding: 36px 0;
+  &__cloumn {
+    grid-column: 3 span;
+  }
+  &__wrapper {
+    grid-column: 9 span;
+  }
+  &__products {
+    --column-gap: 20px;
+    --elems: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--column-gap);
+    row-gap: 36px;
+  }
+  &__item {
+    width: calc(
+      (100% - ((var(--elems) - 1) * var(--column-gap))) / var(--elems)
+    );
+  }
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__item {
+    margin-bottom: 48px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+.custom-checkbox {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  &__input {
+    position: absolute;
+    opacity: 0;
+    &:checked + .custom-checkbox__icon::after {
+      opacity: 1;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    flex-shrink: 0;
+    &::after {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: 2;
+      background-image: url("/img/icons/checkmark.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  }
+
+  &__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--dark-primary);
+  }
+}
